@@ -56,4 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 // $route['home/shop_details'] = 'about_shop';
 // $route['home/shop'] = 'shop';
 // $route['home/testimonial'] = 'testimonial';
-// $route['Admin'] = 'Admin/index';
+$route['admin'] = 'admin/index';
+$route['dashboard'] = 'admin/dashboard';

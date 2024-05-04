@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             text-align: left;
         }
 
-        input[type=text] {
+        input[type=email] {
             background-color: #1A2226;
             border: none;
             border-bottom: 2px solid #0DB8DE;
@@ -162,19 +162,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="col-lg-12 login-form">
                     <div class="col-lg-12 login-form">
-                        <form>
+                        <form method='POST' action='<?php echo base_url('admin'); ?>'>
                             <div class="form-group">
                                 <label class="form-control-label">USERNAME</label>
-                                <input type="text" class="form-control">
+                                <input type="email" name="email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">PASSWORD</label>
-                                <input type="password" class="form-control" i>
+                                <input type="password" name="password" class="form-control" required>
                             </div>
 
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-text">
                                     <!-- Error Message -->
+                                    <?php echo validation_errors(); ?>
                                 </div>
                                 <div class="col-lg-6 login-btm login-button">
                                     <button type="submit" class="btn btn-outline-primary">LOGIN</button>
