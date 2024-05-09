@@ -67,7 +67,7 @@ $(document).ready(function() {
                         </div>
                     `;
                 });
-                $('.nata').html(productHTML);
+                $('.producrs_row').html(productHTML);
             }
         });
     });

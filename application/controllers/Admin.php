@@ -33,4 +33,9 @@ class Admin extends CI_Controller {
     public function dashboard(){
         $this->load->view('Admin/admin_view');
     }
+
+    public function productManage(){
+        $this->load->view('Admin/ad_products_view.php');
+    }
+    
 }

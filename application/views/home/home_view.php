@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-12">
-                                    <div class="row g-4 nata">
+                                    <div class="row g-4 producrs_row">
                                         <?php foreach($products as $pod) {?>
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">

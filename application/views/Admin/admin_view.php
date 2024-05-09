@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Admin-Dashbord</title>
     
     <?php include('inc_admin/inc_ad_head.php'); ?>
 
@@ -74,12 +74,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?php echo base_url('dashboard');?>">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
+                <i class="mdi mdi-chart-areaspline"></i>
               </span>
               <span class="menu-title">Dashboard</span>
             </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#prod_list" aria-expanded="false" aria-controls="prod_list">
+              <span class="menu-icon">
+                <i class="mdi mdi-library-plus"></i>
+              </span>
+              <span class="menu-title">Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="prod_list">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link pod_ad" href="">About Products</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Add New Products</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Add New Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Add New Units</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Others</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#user_list" aria-expanded="false" aria-controls="user_list">
+              <span class="menu-icon">
+                <i class="mdi mdi-account-multiple"></i>
+              </span>
+              <span class="menu-title">Users</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="user_list">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link b_user" href="">Business User</a></li>
+                <li class="nav-item"> <a class="nav-link emp_user" href="">Office Users</a></li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -355,8 +388,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <!-- <div class="row">
-              <div class="col-12 grid-margin stretch-card">
+            <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card pool">
+                            
+            </div>
+              <!-- <div class="col-12 grid-margin stretch-card">
                 <div class="card corona-gradient-card">
                   <div class="card-body py-0 px-0 px-sm-3">
                     <div class="row align-items-center">
@@ -375,8 +411,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                   </div>
                 </div>
-              </div>
-            </div> -->
+              </div> -->
+            </div>
             <div class="row">
               <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
@@ -1033,6 +1069,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- container-scroller -->
 
     <?php include('inc_admin/inc_ad_footer.php'); ?>
+    <?php include('inc_admin/inc_ad_script.php'); ?>
    
   </body>
 </html>
