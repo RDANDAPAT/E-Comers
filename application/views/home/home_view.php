@@ -68,7 +68,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 <div class="carousel-item rounded">
                                     <img src="<?php echo base_url('assets/img/hero-img-2.jpg');?>" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vegetables</a>
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="<?php echo base_url('assets/img/brade.png');?>" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Bread</a>
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="<?php echo base_url('assets/img/chiken.png');?>" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Non-Veg</a>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -149,7 +157,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-4 text-start">
                             <h1>Our Organic Products</h1>
                         </div>
-                        <div class="col-lg-8 text-end">
+                        <!-- <div class="col-lg-8 text-end">
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                 
                             <li class="nav-item">
@@ -163,22 +171,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <a class="category_btn d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" id="" href="<?php echo $data['mpc_name']; ?>">
                                         <span class="text-dark" style="width: 130px;"><?php echo $data['mpc_name']; ?></span>
                                     </a>
-                                    <!-- #tab-<?php //echo $i;?><?php //echo base_url('home/prductByCategory/'.$data['mpc_name']);?> -->
                             </li>
                                 <?php $i++; }?>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-12">
                                     <div class="row g-4 producrs_row">
-                                        <?php foreach($products as $pod) {?>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="<?php echo base_url().'assets/img/'.$pod['mp_image'];?>" class="img-fluid w-100 rounded-top" alt="">
+                                       <!--  -->
+                                       <div class="owl-carousel vegetable-carousel justify-content-center">
+                                            <?php foreach ($products as $pod) {?>
+                                            <div class="border rounded position-relative vesitable-item  <?php switch ($pod['mpc_name']) {
+                                                    case"Fruits":
+                                                        echo"border-secondary";
+                                                        break;
+                                                    case"Vegetables":
+                                                        echo"border-primary";
+                                                        break;
+                                                    case"Bread":
+                                                        echo"border-info";
+                                                        break;
+                                                    case"Non-Veg":
+                                                        echo"border-danger";
+                                                        break;
+                                                    default:
+                                                        break;
+                                                    }?>">
+                                                <div class="vesitable-img">
+                                                    <img src="<?php echo base_url('assets/img/'.$pod['mp_image']);?>" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white px-3 py-1 rounded position-absolute <?php switch ($pod['mpc_name']) {
                                                     case"Fruits":
@@ -195,33 +218,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         break;
                                                     default:
                                                         break;
-                                                    }?>" style="top: 10px; left: 10px;"><?php echo $pod['mpc_name']; ?></div>
-                                                <div class="p-4 border border-top-0 rounded-bottom <?php switch ($pod['mpc_name']) {
-                                                    case"Fruits":
-                                                        echo"border-secondary";
-                                                        break;
-                                                    case"Vegetables":
-                                                        echo"border-primary";
-                                                        break;
-                                                    case"Bread":
-                                                        echo"border-info";
-                                                        break;
-                                                    case"Non-Veg":
-                                                        echo"border-danger";
-                                                        break;
-                                                    default:
-                                                        break;
-                                                    }?>">
-                                                    <h4><?php echo $pod['mp_name']; ?></h4>
-                                                    <p><?php echo $pod['mp_details']; ?></p>
-                                                    <div class="d-flex justify-content-center flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">₹ <?php echo $pod['mp_price']; ?> / kg</p>
+                                                    }?>" style="top: 10px; right: 10px;"><?php echo $pod['mpc_name']; ?></div>
+                                                <div class="p-4 rounded-bottom">
+                                                    <h4><?php echo $pod['mp_name'];?></h4>
+                                                    <p><?php echo $pod['mp_details'];?></p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">₹<?php echo $pod['mp_price'];?> / kg</p>
                                                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <?php } ?>
                                         </div>
-                                        <?php } ?>
+                                        <!--  --> 
                                     </div>
                                 </div>
                             </div>

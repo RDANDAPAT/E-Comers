@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url('assets/admin-assets/vendors/flag-icon-css/css/flag-icon.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/admin-assets/vendors/owl-carousel-2/owl.carousel.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/admin-assets/vendors/owl-carousel-2/owl.theme.default.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/admin-assets/vendors/mdi/css/materialdesignicons.min.css');?>">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->

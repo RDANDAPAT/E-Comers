@@ -17,6 +17,16 @@ class Dashboard extends CI_Controller {
         echo json_encode($result);
     }
 
+    public function get_ad_products_category(){
+        $result=$this->Admin_Model->get_products_category();
+        echo json_encode($result);
+    }
+
+    public function ad_product_update(){
+        $result=$this->Admin_Model->get_products();
+        echo json_encode($result);
+    }
+
     // for employee section
 
     public function employee_details(){

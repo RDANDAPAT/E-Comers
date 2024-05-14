@@ -10,7 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <?php include('inc/include_meta.php'); ?>
+        <?php //include('../shop/inc_shop/inc_shop_head.php'); ?>
+        <?php include('home/inc_home/include_meta.php'); ?>
         
     </head>
 
@@ -18,13 +19,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" role="status"></div>
+        <div class="spinner-grow text-primary" role="status"></div>
         </div>
         <!-- Spinner End -->
 
 
         <!-- Navbar start -->
-        <?php include('inc/include_nav.php'); ?>
+        <?php include('home/inc_home/include_nav.php'); ?>
         <!-- Navbar End -->
 
 
@@ -497,7 +498,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         
     <!-- JavaScript Libraries -->
-    <?php include('inc/include_footer.php'); ?>
+    <?php include('home/inc_home/include_footer.php'); ?>
 
     </body>
 

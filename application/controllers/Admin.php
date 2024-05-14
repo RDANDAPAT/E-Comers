@@ -31,11 +31,12 @@ class Admin extends CI_Controller {
     }
 
     public function dashboard(){
-        $this->load->view('Admin/admin_view');
+        $data['product_category']=$this->Admin_Model->get_products_category();
+        $this->load->view('Admin/admin_view',$data);
     }
 
     public function productManage(){
-        $this->load->view('Admin/ad_products_view.php');
+        $this->load->view('Admin/ad_products_view');
     }
     
 }

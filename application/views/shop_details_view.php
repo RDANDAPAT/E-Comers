@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <?php include('inc/include_meta.php'); ?>
+        <?php include('home/inc_home/include_meta.php'); ?>
 
     </head>
 
@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
         <!-- Navbar start -->
-        <?php include('inc/include_nav.php'); ?>
+        <?php include('home/inc_home/include_nav.php'); ?>
         <!-- Navbar End -->
 
 
@@ -642,7 +642,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         
     <!-- JavaScript Libraries -->
-    <?php include('inc/include_footer.php'); ?>
+    <?php include('home/inc_home/include_footer.php'); ?>
 
     </body>
 
